@@ -287,7 +287,8 @@ def trading_loop():
             market_data = get_market_data(symbol, timeframes)
             
             if not market_data:
-                time.sleep(60)  # Wait 1 minute before retry
+                refresh_interval = trading_config.get('data_refresh_interval', 1)
+                time.sleep(refresh_interval)  # Wait before retry
                 continue
             
             # Detect signals
@@ -308,12 +309,14 @@ def trading_loop():
             # Update last update time
             st.session_state.last_update = datetime.now()
             
-            # Wait before next iteration (1 minute)
-            time.sleep(60)
+            # Wait before next iteration (configurable refresh interval)
+            refresh_interval = trading_config.get('data_refresh_interval', 1)  # Default 1 second
+            time.sleep(refresh_interval)
             
         except Exception as e:
             logger.error(f"Error in trading loop: {e}")
-            time.sleep(60)
+            refresh_interval = trading_config.get('data_refresh_interval', 1)
+            time.sleep(refresh_interval)  # Wait before retry on error
 
 
 def start_trading():

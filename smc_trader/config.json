@@ -18,7 +18,8 @@
     "max_positions": 1,
     "close_before_friday": true,
     "friday_close_hour": 21,
-    "friday_close_timezone": "GMT"
+    "friday_close_timezone": "GMT",
+    "data_refresh_interval": 1
   },
   "timeframes": {
     "execution": "M5",
