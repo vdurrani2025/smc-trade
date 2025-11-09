@@ -1,0 +1,62 @@
+{
+  "mt5": {
+    "login": 0,
+    "password": "",
+    "server": "",
+    "path": ""
+  },
+  "strategy": {
+    "strategy_mode": "Intraday",
+    "lot_size": 0.1,
+    "ema_fast": 8,
+    "ema_slow": 20,
+    "timeframe_entry": "M15",
+    "timeframe_confirmation": "H1",
+    "enable_esi_check": false,
+    "enable_adx_check": true,
+    "adx_threshold": 25,
+    "pullback_confirmation": true,
+    "stop_loss_pips": 20,
+    "take_profit_pips": 40,
+    "trailing_stop_pips": 15,
+    "use_trailing_stop": true,
+    "max_open_trades": 1,
+    "risk_per_trade": 1.0,
+    "use_fixed_lot": false,
+    "enable_logging": true
+  },
+  "mode_presets": {
+    "Scalper": {
+      "timeframe_entry": "M5",
+      "timeframe_confirmation": "M15",
+      "stop_loss_pips": 10,
+      "take_profit_pips": 20,
+      "trailing_stop_pips": 5,
+      "ema_fast": 8,
+      "ema_slow": 20
+    },
+    "Intraday": {
+      "timeframe_entry": "M15",
+      "timeframe_confirmation": "H1",
+      "stop_loss_pips": 20,
+      "take_profit_pips": 40,
+      "trailing_stop_pips": 15,
+      "ema_fast": 8,
+      "ema_slow": 20
+    },
+    "Swing": {
+      "timeframe_entry": "H4",
+      "timeframe_confirmation": "D1",
+      "stop_loss_pips": 50,
+      "take_profit_pips": 120,
+      "trailing_stop_pips": 40,
+      "ema_fast": 8,
+      "ema_slow": 20
+    }
+  },
+  "logging": {
+    "log_file": "ema_trades.log",
+    "csv_file": "ema_trades.csv"
+  }
+}
+
