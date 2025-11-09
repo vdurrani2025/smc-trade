@@ -1,0 +1,45 @@
+{
+  "mt5": {
+    "login": 0,
+    "password": "",
+    "server": "",
+    "path": ""
+  },
+  "trading": {
+    "symbol": "EURUSD",
+    "risk_percent": 1.0,
+    "lot_size": 0.01,
+    "take_profit_pips": 20,
+    "stop_loss_pips": 10,
+    "risk_reward_ratio": 2.0,
+    "use_fixed_tp": false,
+    "fixed_tp_dollars": 12.0,
+    "trailing_stop": false,
+    "max_positions": 1,
+    "close_before_friday": true,
+    "friday_close_hour": 21,
+    "friday_close_timezone": "GMT"
+  },
+  "timeframes": {
+    "execution": "M5",
+    "fvg_choch": ["M1", "M5"],
+    "bos_liquidity": ["M15", "H1"]
+  },
+  "notifications": {
+    "telegram_enabled": false,
+    "telegram_bot_token": "",
+    "telegram_chat_id": "",
+    "email_enabled": false,
+    "email_smtp_server": "",
+    "email_smtp_port": 587,
+    "email_username": "",
+    "email_password": "",
+    "email_recipient": ""
+  },
+  "logging": {
+    "log_file": "trades.log",
+    "log_to_csv": true,
+    "csv_file": "trade_history.csv"
+  }
+}
+
